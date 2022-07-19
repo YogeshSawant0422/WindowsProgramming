@@ -70,12 +70,17 @@ LRESULT CALLBACK WndProc(HWND hwnd,UINT iMsg,WPARAM wParam,LPARAM lParam)
 	//local variable declaration 
 
 	 TCHAR str[255];
+	 int num1,num2,num3; 
+
 	
 	//code
 	switch(iMsg)
 	{
 		case WM_CREATE:
-			wsprintf(str,TEXT("WM_CREATE Message is received"));
+			num1 = 25;
+			num2 = 75;
+			num3 = num1 + num2;
+			wsprintf(str,TEXT("Sum Of %d & %d is %d"),num1, num2, num3);
 			MessageBox(hwnd,str,TEXT("Message"),MB_OK);
 			break;
 		case WM_KEYDOWN:
